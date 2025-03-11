@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration</title>
+    <link rel="stylesheet" href="css/resetforgot.css">
+    <link rel="shortcut icon" href="photos/flask.svg" type="image/x-icon">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+</head>
+<body>
+    <form action="/groupeventreg" method="post">
+        <article>Group/Duet Event Registration</article>
+    <input type="email" name="email" id="email" placeholder="Email"> <br>
+    <select name="event" id="sol">
+        
+        <option value="group dance">Group Dance</option>
+        <option value="group singing">Group Singing</option>
+        <option value="duet dance">Duet Dance</option>
+        <option value="bgmi">BGMI</option>
+        <option value="valorant">Valorant</option>
+        <option value="antakshari">Antakshari</option>
+        <option value="nukkad">Nukkad Natak</option>
+        <option value="ad mania">Ad Mania</option>
+        <option value="desigining">Desigining</option>
+        <option value="hackathon">Hackathon</option>
+        <option value="coding">Coding</option>
+        <option value="quiz">Quiz</option>
+        <option value="rangoli">Rangoli</option>
+        <option value="face painting">Face Painting</option>
+        <option value="fashion show">Fashion Show</option>
+        <option value="tug of war">Tug of War</option>
+        <option value="treasure hunt">Treasure Hunt</option>
+        <option value="b plan">B Plan</option>
+    </select> <br> <br> <br>
+     <input type="text" name="teamname" id="teamname" placeholder="Team Name"> <br>
+     <input type="text" name="teammates" id="team" placeholder="Name of All Teammates"> <br>
+</div><br>
+    <button type="submit" id="submitbutton">Register Event</button>
+    </form>
+</body>
+</html>

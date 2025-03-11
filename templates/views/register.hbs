@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>header}}
+    <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+    <main>
+        
+
+            <div class="bigFlex1">
+                <div class="back-to-home-div"><div id="arrow-left" onclick="history.back()"></div></div> 
+                <div id="logo"><img src="Aquaregia_logo55.png" alt=""></div>
+                
+                <form class="register" action="/register" method="post" enctype="multipart/form-data" >
+                    <div class="heading-and-login-link-div">
+                    <h1>Register</h1>
+                    <p>Already have an account? <a href="/login">Login</a></p>
+                    </div>
+                    
+                    <div class="smallFlex">
+
+                        <div class="bchaFlex">
+
+                            <label for="firstname">First name </label>
+                            <input class="inputCont" type="text" name="firstname" id="firstname"  required="required"/>
+                        </div>
+                        <div class="bchaFlex">
+
+                            <label for="Lastname">Last name </label>
+                            <input class="inputCont" type="text" name="surname" id="surname" required="required"/>
+                        </div>
+                        <div class="bchaFlex">
+
+
+                            <select class="inputCont" name="gender" id="gender">
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="bchaFlex">
+
+                            <label for="college">College/University </label>
+                            <input class="inputCont" type="text" name="college" id="college"  required="required"/>
+                        </div>
+                        <div class="bchaFlex">
+
+                            <label for="course">Course </label>
+                            <input class="inputCont" type="text" name="course" id="course"  required="required"/>
+                        </div>
+                        <div class="bchaFlex">
+
+                            <label for="year">Year </label>
+                            <input class="inputCont" type="text" name="year" id="year"  required="required" />
+                        </div>
+                        <div class="imageInputFlex">
+
+                            <div id="imageDisplay">
+                                <p id="upload"> Upload ID Card <br><br>(OPTIONAL)</p>
+                                {{!-- <p id="upload">Upload ID Card</p>
+                                <p id="size">( Size must be less than 1MB )</p>                                 --}}
+                            </div>
+                                <input type="file" name="idCard" id="inputID_CardButton" accept="image/png, image/jpg, image/jpeg">
+                        </div>
+                        <div class="bchaFlex">
+
+                            <label for="address">Address </label>
+                            <input class="inputCont" type="text" name="address" id="address"  required="required"/>
+                        </div>
+                        <div class="bchaFlex">
+
+                            <label for="email">Email </label>
+                            <input class="inputCont" type="email" name="email" id="email"  required="required"/>
+                        </div>
+                        <div class="bchaFlex">
+
+                            <label for="phone">Mobile No. </label>
+                            <input class="inputCont" type="number" name="phone" id="phone"  maxlength="10" required="required" />
+                        </div>
+                        <div class="bchaFlex">
+
+                            <label for="password">Password </label>
+                            <input class="inputCont" type="password" name="password" id="password"  required="required"/>
+                        </div>
+                        <div class="bchaFlex">
+
+                            <label for="password2">Confirm Password </label>
+                            <input class="inputCont" type="password" name="password2" id="password2"  required="required"/>
+                           
+                            <div id="eyetoggle">
+                                <i class="fas fa-eye" id="show"></i>
+                                <i class="fas fa-eye-slash" id="hide"></i>
+                            </div>
+                        </div>
+                         <article id="passwordmatchArticle">*Password didn't match</article>
+                        <div style="display: flex; justify-content: center; text-align: center;">
+                            <p style="color: red; font-size: 18px; font-weight: bold;">Note: College ID is mandatory during the entry </p>
+                        </div>
+                        <div class="btn">
+                            <button type="submit" id="submitbutton">Register </button><br>
+                        </div>
+                    </div>
+                    
+                </form>
+            </div>
+            <div class="bigFlex2"></div>
+          
+
+    </main>
+</body>
+<script>
+
+    // for inputing and displaying images
+    const inputID_CardButton= document.getElementById("inputID_CardButton");
+var uploaded_image="";
+
+inputID_CardButton.addEventListener("change", function(){
+    const reader=new FileReader();
+    reader.addEventListener("load", () => {
+        uploaded_image=reader.result;
+        document.getElementById("imageDisplay").style.backgroundImage="url("+uploaded_image+")";
+    });
+    reader.readAsDataURL(this.files[0]);
+});
+// ends here***********************************
+    const Rinput = document.querySelectorAll('.bchaFlex .inputCont');
+
+   Rinput.forEach((thisInput) =>{
+   thisInput.addEventListener('focus',() =>{
+    thisInput.previousElementSibling.classList.add('activeLabelup');
+   });
+
+   });
+
+   Rinput.forEach((thisInput) =>{
+   thisInput.addEventListener('blur',() =>{
+    if(thisInput.value === ""){
+
+        thisInput.previousElementSibling.classList.remove('activeLabelup');
+    }
+   });
+
+   });
+
+//    for eye toggle button
+let alertMsg = document.getElementById('passwordmatchArticle');
+let PasswordInput = document.getElementById("password");
+ let PasswordInput2 = document.getElementById("password2");
+   let eyeBtn = document.getElementById("eyetoggle");
+    let hide = document.getElementById("hide");
+    let show = document.getElementById("show");
+    
+     eyeBtn.addEventListener('click',passwordSee);
+     function passwordSee(g){
+        if (PasswordInput2.type === "password"){
+        PasswordInput2.type = "text";
+        show.style.display = "block";
+        hide.style.display = "none";
+
+    }
+    else{
+        PasswordInput2.type = "password";
+        show.style.display = "none";
+        hide.style.display = "block";
+
+    }
+    }
+    PasswordInput2.onkeyup = function didnotmatchMsg(){
+        if(PasswordInput.value == PasswordInput2.value){
+            
+            
+            alertMsg.style.display = "none";
+            document.getElementById('submitbutton').disabled = false;
+        }
+        else{
+            alertMsg.style.color = "red";
+            alertMsg.style.display = "block"
+            document.getElementById('submitbutton').disabled = true;
+        }
+    }
+    PasswordInput.onkeyup = function didnotmatchMsgSecond(){
+        if(PasswordInput.value == PasswordInput2.value){
+            
+            
+            alertMsg.style.display = "none";
+            document.getElementById('submitbutton').disabled = false;
+        }
+        else{
+            alertMsg.style.color = "red";
+            alertMsg.style.display = "block"
+            document.getElementById('submitbutton').disabled = true;
+        }
+    }
+
+
+</script>
+</html>

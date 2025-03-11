@@ -1,0 +1,513 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+*::selection {
+    background-color: transparent;
+}
+
+*::-moz-selection {
+    background: transparent;
+}
+ 
+
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+:root{
+    font-family: Whitney, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    cursor:default;
+}
+body{
+    background-color: white;
+    background-image: url(../photos/Stars-background-dark.svg);
+    background-size: 60%;
+    overflow-x: hidden;
+}
+.main-container{
+    width: 100%;
+    height: fit-content;
+}
+.maharaja-heading{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.text-heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.heading1{
+    color: white;
+    font-size: 4.5rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    word-spacing: 5px;
+}
+.heading2{
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 400;
+    letter-spacing: 5px;
+    word-spacing: 5px;
+}
+.heading3{
+    color: white;
+    font-size: 3rem;
+    font-weight: 400;
+    letter-spacing: 5px;
+    word-spacing: 5px;
+}
+.maharaja-heading img{
+    width: 125px;
+    margin: 0 30px;
+}
+.plain-text{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 200px;
+    text-align: justify;
+
+}
+article{
+    color: white;
+    font-size: 2.5rem;
+    display: inline-block;
+}
+.highlighted-text{
+    color: rgb(255, 162, 162);
+    /* font-size: rem; */
+    display: inline-block;
+}
+.aquaregia-heading{
+    width: 100%;
+    height: 150px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.aquaregia-heading article{
+    color: white;
+    font-size: 4rem;
+    font-weight: 700;
+}
+.about-heading{
+    color: rgb(255, 131, 131);
+    font-size: 4.5rem;
+    font-weight: 700;
+}
+#formobile{
+    display: none;
+}
+.big-daddy-container{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 50px;
+    padding: 0px 150px;
+    flex-wrap: wrap;
+        gap: 40px;
+}
+.studentUnionHeading{
+    color: white;
+    font-size: 6rem;
+    /* display: inline-block; */
+}
+#left{width: 5vw;
+    filter: contrast(10);
+    translate: 15px 10px ;
+    mix-blend-mode: difference;
+}
+#right{width: 5vw;
+
+    filter: contrast(10);
+    transform: scaleX(-1);
+    translate:-15px 10px ;
+    mix-blend-mode: difference;
+
+}
+
+.profile-card{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    width: 200px;
+    height: 300px;
+    background: linear-gradient(rgba(236, 236, 236, 0.112),rgba(203, 203, 203, 0.015));
+    /* backdrop-filter: blur(5px); */
+    padding: 30px;
+    transform-style: preserve-3d;
+    border-radius: 10px;
+}
+.profile-card:hover .info{
+    transform: translateZ(50px);
+}
+.dp{
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    transform: translateZ(10px);
+    border-radius: 5px;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    height: 30%;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-end;
+    transform: translateZ(0px);
+}
+
+.name{
+    color: white;
+    font-size: 2rem;
+}
+.mobile,.email{
+    color: white;
+    font-size: 1.5rem;
+}
+#rocket1{
+    background-image: url(../photos/rocket.svg);
+    position: absolute;
+    height: 100px;
+    width: 180px;
+    bottom:60px;
+    left: 0;
+    rotate: -40deg;
+    opacity: 0.8;    
+    animation: rocket 10s ease-in infinite;
+    z-index: 1;
+    mix-blend-mode: difference;
+}
+@keyframes rocket{
+    0%{
+        transform: translateX(0px);
+    }
+    100%{
+        transform: translateX(100vw);
+    }
+}
+.sandeep{
+    background-image: url(sandeep.jpg);
+    background-size: cover;
+    background-position: 0px -5px;
+    background-repeat: no-repeat;
+    z-index: 10;
+    
+    }
+.govind{
+    background-image: url(govind.jpeg);
+    background-size: cover;
+    background-position: 0px -5px;
+    background-repeat: no-repeat;
+    }
+.sarthak{
+    background-image: url(sarthak.jpeg);
+    background-size: cover;
+    background-position: 0px -5px;
+    background-repeat: no-repeat;
+    }
+.atul{
+    background-image: url(atul.jpeg);
+    background-size: cover;
+    background-position: 0px -5px;
+    background-repeat: no-repeat;
+    }
+
+
+
+/* responsive code below*/
+@media screen and (max-width:1920px) {
+    html {
+        font-size: 60%;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    html {
+        font-size: 55%;
+    }
+
+}
+@media screen and (max-width:1141px) {
+    .heading1{
+        font-size: 4vw;
+      }
+      .maharaja-heading img{
+        width: 100px;
+        margin: 0 10px;    
+    }
+    .plain-text{
+        padding:20px 100px;
+    }
+}
+@media screen and (max-width:1045px) {
+    .heading1{
+        font-size: 3.75vw;
+      }
+      .maharaja-heading img{
+        width: 100px;
+        margin: 0 10px;    
+    }
+}
+@media screen and (max-width:998px) {
+    html {
+        font-size: 55%;
+    }
+    .text-heading{
+        width: 80vw;
+    }
+    .heading1{
+        font-size: 3.75vw;
+      }
+      .maharaja-heading img{
+        width: 100px;
+        margin: 0 10px;    
+    }
+    .plain-text{
+        padding:20px 50px;
+    }
+    .big-daddy-container{
+        padding: 0px 50px;
+    }
+}
+@media screen and (max-width:934px) {
+    .heading1{
+        font-size: 3.5vw;
+      }   
+}
+@media screen and (max-width:850px) {
+    .heading1{
+        font-size: 3rem;
+      }   
+      .heading3{
+        font-size: 2.5rem;
+      }
+}
+@media screen and (max-width:800px) {
+    .heading1{
+        font-size: 2.7rem;
+      }  } 
+@media screen and (max-width:755px) {
+    .heading1{
+        font-size: 2.5rem;
+      } 
+    .heading3{
+        font-size: 2.3rem;
+      }
+      .maharaja-heading img{
+        width: 80px;
+        margin: 0 10px;
+      } 
+}
+@media screen and (max-width:685px) {
+    .heading1{
+        font-size: 2.5rem;
+        letter-spacing: 2px;
+        word-spacing: 0px;
+
+      } 
+    .heading3{
+        font-size: 2rem;
+        letter-spacing: 2px;
+        word-spacing: 0px;
+      }
+      .maharaja-heading img{
+        width: 75px;
+        margin: 0 5px;
+      } 
+    
+}
+@media screen and (max-width:592px) {
+    .heading1{
+        font-size: 2.3rem;
+        letter-spacing: 1px;
+        word-spacing: 0px;
+
+      } 
+    .heading3{
+        font-size: 2rem;
+        letter-spacing: 0px;
+        word-spacing: 0px;
+      }
+      .maharaja-heading img{
+        width: 70px;
+        margin: 0 2px;
+      }   
+    
+}
+@media screen and (max-width:512px) {
+    .heading1{
+        /* font-size: 2.1rem; */
+        letter-spacing: 0px;
+        word-spacing: 0px;
+
+      } 
+    .heading3{
+        font-size: 1.8rem;
+        letter-spacing: 0px;
+        word-spacing: 0px;
+      }
+      .maharaja-heading img{
+        width: 60px;
+        margin: 0 2px;
+      }   
+    
+    
+}
+
+@media screen and (max-width:500px) {
+    html {
+        font-size: 45%;  
+    }
+    .maharaja-heading{
+        height: 100px;
+    }
+    .maharaja-heading img{
+        width: 40px;
+    }
+    .heading1{
+        color: white;
+        font-size: 1.2rem;
+        font-weight: 700;
+        letter-spacing: 5px;
+        word-spacing: 5px;
+    }
+    .heading2{
+        color: white;
+        font-size: 1rem;
+        font-weight: 400;
+        letter-spacing: 3px;
+        word-spacing: 1px;
+    }
+    .heading3{
+        color: white;
+        font-size: 1rem;
+        font-weight: 400;
+        letter-spacing: 3px;
+        word-spacing: 1px;
+    } 
+    .text-heading{
+        display: none;
+    }
+    .img-container{
+        display: none;
+    }
+    .img2-container{
+        display: none;
+    }
+    #formobile{
+        display: block;
+        width: 100%;
+    }
+    .profile-card{
+        width: 220px;   
+    }
+}
+
+@media screen and (max-width:430px) {
+    html {
+        font-size: 43%;
+    }
+    .maharaja-heading{
+        height: 100px;
+        padding: 0;
+    }
+    .maharaja-heading img{
+        width: 40px;
+    }
+    .heading1{
+        color: white;
+        font-size: 1.1rem;
+        font-weight: 700;
+        letter-spacing: 3px;
+        word-spacing: 5px;
+    }
+    .heading2{
+        color: white;
+        font-size: 1rem;
+        font-weight: 400;
+        letter-spacing: 1px;
+        word-spacing: 1px;
+    }
+    .heading3{
+        color: white;
+        font-size: 1rem;
+        font-weight: 400;
+        letter-spacing: 1px;
+        word-spacing: 1px;
+    } 
+}
+
+@media screen and (max-width:375px) {
+    html {
+        font-size: 40%;
+    }
+    .plain-text{
+        padding: 20px;
+        padding-top: 10px;
+    }
+    .aquaregia-heading{
+        height: 60px;
+    }
+    .aquaregia-heading article{
+        font-size: 3rem;
+    }
+  
+}
+@media screen and (max-width:300px) {
+    html {
+        font-size: 40%;
+    }
+    .maharaja-heading{
+        height: 100px;
+        padding: 0;
+    }
+    .maharaja-heading img{
+        width: 30px;
+    }
+    .heading1{
+        color: white;
+        font-size: .8rem;
+        font-weight: 700;
+    }
+    .heading2{
+        color: white;
+        font-size: 1rem;
+        font-weight: 400;
+    }
+    .heading3{
+        color: white;
+        font-size: 1rem;
+        font-weight: 400;
+    } 
+}
+@media screen and (max-width:280px) {
+
+.profile-card{
+    height: 85vw;
+}    
+}
+
+/* responsive code above */
+

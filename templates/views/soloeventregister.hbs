@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration</title>
+    <link rel="stylesheet" href="css/resetforgot.css">
+    <link rel="shortcut icon" href="photos/flask.svg" type="image/x-icon">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+</head>
+<body>
+    <form action="/soloeventreg" method="post">
+        <article>Solo Event Registration</article>
+    <input type="email" name="email" id="email" placeholder="Email"> <br>
+    <select name="soloevent" id="sol">
+        <option value="solo dance">Solo Dance</option>
+        <option value="solo singing">Solo Singing</option>
+        <option value="mono act">Mono Act</option>
+        <option value="creative capture">Creative Capture</option>
+        <option value="creative reel">Creative Reel</option>
+        <option value="jam">JAM: Just A Minute</option>
+        <option value="creative writing">Creative Writing</option>
+        <option value="debate">Debate</option>
+        <option value="poetry">Poetry</option>
+        <option value="aqua got talent">Aqua Got Talent</option>
+        <option value="poster making">Poster Making</option>
+        <option value="sketching">Sketching</option>
+        <option value="sketching">Cinematic Shots</option>
+        {{!-- <option value="stand up">Stand Up</option> --}}
+        <option value="meme holic">Meme Holic</option>
+    </select>
+</div><br>
+    <button type="submit" id="submitbutton">Register Event</button>
+    </form>
+</body>
+</html>

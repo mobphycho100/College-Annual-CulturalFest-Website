@@ -1,0 +1,905 @@
+@font-face {
+    font-family: cmFont;
+    src: url(../photos/CmFont-BWVm5.ttf);
+}
+@font-face {
+    font-family: space;
+    src: url(../photos/SpaceMavericks-qZo91.ttf);
+}
+@font-face {
+    font-family: spaceFrig;
+    src: url(../photos/SpaceFrigate-KVdW.ttf);
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+*::selection {
+    background-color: transparent;
+}
+
+*::-moz-selection {
+    background: transparent;
+}
+ 
+* {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+}
+
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+:root{
+    font-family: Whitney, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    cursor:default;
+}
+
+body {
+    background-color: white;
+    overflow-x: hidden;
+    background-image: url(../photos/Stars-background-dark.svg);
+    background-size: 60%;
+}
+#home{
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+}
+
+ #preloader {
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-y: hidden;
+} 
+#infinity-logo{
+    background-image: url(../photos/infinity-logo-png.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center ;
+    width: 100px;
+    height: 100px;
+}
+
+/* after clicking hamburger icon scrolling will disable */
+.stopscrolling{
+    overflow: hidden;
+}
+/* after clicking hamburger icon scrolling will disable */
+
+.aquaregiaTitleContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    background-image: url(../photos/infinity-sign-pc.gif);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    mix-blend-mode:lighten;
+}
+
+#aquaregiaTitle {
+    font-size: 10rem;
+    color: white;
+    font-weight: 800;
+    mix-blend-mode: exclusion;
+
+    
+}
+
+
+#toInfinity {
+    font-size: 3.2rem;
+    font-weight: 500;
+    color: white;
+    mix-blend-mode: difference;
+    letter-spacing: 2px;
+}
+.book-slot-btn-container{
+    position: absolute;
+    bottom: 0;
+    height: 250px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button{
+    cursor: pointer;
+}
+
+.fest-post{
+    text-align: center;
+}
+
+#bookSlotBtn {
+    width: 250px;
+    height: 40px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 20px;
+    letter-spacing: 3px;
+    color: white;
+    transition-duration: .2s;
+    font-weight: 600;
+    mix-blend-mode: difference;
+}
+#bookSlotBtn a{
+    text-decoration: none;
+}
+
+#bookSlotBtn:hover {
+    background-color: white;
+    color: black;
+    transform: scale(1.05);
+}
+
+.aboutMainContainer {
+    margin-top: 300px;
+    width: 100%;
+    height: 800px;
+    display: flex;
+}
+
+#bigFlex {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 100%;
+}
+
+#flex1,
+#flex3 {
+    height: 33.33%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#flex2 {
+    height: 33.33%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    overflow: visible;
+    z-index: 99;
+}
+
+#infoCircle1{
+    background-image: url(../photos/redPlanet.svg);
+    background-position: center;
+    background-size: 103%;
+    background-repeat: no-repeat;
+}
+#infoCircle2{
+    background-image: url(../photos/bluePlanet.svg);
+    background-position: center;
+    background-size: 105%;
+    background-repeat: no-repeat;
+    border: 10px solid black;
+}
+#infoCircle3{
+    background-image: url(../photos/greenPlanet.svg);
+    background-position: center;
+    background-size: 120%;
+    background-repeat: no-repeat;
+}
+#infoCircle1 ,
+#infoCircle2 ,
+#infoCircle3  {
+    height: 250px;
+    width: 250px;
+    backdrop-filter: blur(7px);
+    background-color:rgba(250, 250, 250, 0.015);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition-duration: .5s;
+}
+#infoCircle1:hover {
+    transform:translate(-10px,-10px);
+    transition-duration: .5s;
+}
+#infoCircle2:hover {
+    transform:translate(-10px,0px);
+    transition-duration: .5s;
+}
+#infoCircle3:hover  {    
+    transform:translate(-10px,10px);
+    transition-duration: .5s;
+
+    }
+    #infoCircle1 span,
+    #infoCircle2 span,
+    #infoCircle3  span{
+        font-size: 4rem;
+        font-weight: 700;
+        color: white;
+        font-family: spaceFrig;
+    }
+    #infoCircle1 p,
+    #infoCircle2 p,
+    #infoCircle3 p{
+        font-size: 3rem;
+        letter-spacing: 3px;
+        font-weight: 500;
+        color: white;
+    }
+#about {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#aboutCircle {
+    height: 900px;
+    width: 900px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition-duration: .5s;
+    position: relative;
+    text-align: center;
+}
+#aboutCircle p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 100px;
+    width: 55%;
+    font-size: 1.6rem;
+    color: #d8becb;
+    font-weight: 300;
+    letter-spacing: 3px;
+}
+
+#aboutCircle:hover{
+    transform: scale(1.1);
+    transition-duration: .5s;
+    
+}
+#aboutCircle::before{
+    content:"";
+    height:100%;
+    width: 900px;
+    border-radius: 50%;
+    transition-duration: .5s;
+    position: absolute;
+    z-index: -1;
+    background-image: url(../photos/pngwing.com.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@keyframes blackHoleSpin{
+    0%{
+        transform:  rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+#aboutCircle:hover::before{
+    transform: scale(1.1);
+    transition-duration: .5s;
+    rotate: -2deg;
+        animation: blackHoleSpin 300s linear infinite;
+    animation-fill-mode: forwards;
+}
+#aboutCircle span{ 
+    font-size: 5rem ;
+    font-weight: 800;
+    color: #ffe1fd;
+    margin-bottom: 50px;
+    letter-spacing: 10px;
+    font-family: spaceFrig;
+    filter: drop-shadow(0px 0px 2px #ccae8a);
+}
+
+
+.two-Lines-About-Aquaregia-Theme-Container{
+    margin-top: 200px;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+}
+
+#date{
+    font-size: 2rem;
+    font-weight: 500;
+    color: white;
+    letter-spacing: 3px;
+}
+
+#orgaCO{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.two-Lines-Sub-Div{
+    width: 70%;
+    height: fit-content;
+    border-radius: 20px;
+    background-image: url(../photos/34.webp);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    overflow: hidden;
+}
+.two-Lines-Sub-Div-Logo{
+    width: 350px;
+    height: 350px;
+    font-size: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: transparent;
+    /* border: 2px solid rgb(57, 57, 57); */
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.two-Lines-Sub-Div-Logo img{
+    width: 100%;
+}
+.two-Lines-Sub-Div-Description-main-div{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    padding-left: 70px;
+
+}
+#two-Lines-Sub-Div-Title{
+    font-size: 6rem;
+    width: 100%;
+    color: white;
+    font-weight: 500;
+   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   letter-spacing: 10px;
+  
+}
+#two-Lines-Sub-Div-Description{
+    font-size: 2rem;
+    color: white;
+    text-align: justify;
+}
+#two-Lines-Sub-Div-ul{
+    list-style: none;
+    display:flex;
+    font-size: 2rem;
+    color: white;
+    justify-content: space-between;
+    font-weight:700;
+    width: 100%;
+    height: fit-content;
+    align-items: center;
+}
+#two-Lines-Sub-Div-ul li{
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+
+
+#two-Lines-Sub-Div-li1{
+    padding-left: 0px;
+}
+#two-Lines-Sub-Div-li2{
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+    padding: 0px 40px;
+}
+
+.category-heading{
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+    font-weight: 500;
+    margin:150px 0px 50px 0;
+    letter-spacing: 2px;
+    /* font-family: fastHand; */
+}
+.category-container{
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 100px;
+}
+.profile-card{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 250px;
+    background-color: rgba(33, 33, 33, 0.467);
+    padding:20px 0px;
+    transform-style: preserve-3d;
+    border-radius: 10px;
+    gap: 20px;  
+}
+.dp{
+    height: 100%;
+    width: 80%;
+    background-color: transparent;
+    border-radius: 5px;
+    overflow: hidden;   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.dp img{
+    height: 100%;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    height: 20%;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateZ(0px);
+}
+
+
+.name{
+    color: white;
+    font-size: 1.5rem;
+}
+
+.fest-post{
+    color: white;
+    font-size: 1rem;
+}
+.major-attraction-title-for-mobile-div{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+
+}
+#major-attraction-title-for-mobile{
+    font-size: 3rem;
+    color: white;
+}
+/* responsive code below*/
+@media screen and (max-width:1920px) {
+    html {
+        font-size: 60%;
+    }
+}
+@media screen and (max-width:1450px) {
+    html {
+        font-size: 60%;
+    }
+.two-Lines-Sub-Div{
+    width: 80%;
+}    
+    
+}
+
+@media screen and (max-width:1200px) {
+    html {
+        font-size: 60%;
+    }
+   
+    .two-Lines-Sub-Div{
+        width: 95%;
+    }  
+    
+    
+}
+
+@media screen and (max-width:998px) {
+    html {
+        font-size: 55%;
+    }
+   
+   #homeformobilenav{
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+   }
+   .aquaregiaTitleContainer{
+    background-image: url(../photos/infinity-sign-gif-mobie.gif);
+   }
+    .aboutMainContainer {
+        flex-direction: column-reverse;
+        height: fit-content;
+        width: 100%;
+    }
+    #about {
+
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      
+
+    }
+    #bigFlex {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 400px;
+    }
+    #flex1,#flex2,#flex3{
+        
+        height: 100%;
+        width: 33.33%;
+    }
+    #flex1,#flex3{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    #flex2{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    }
+}
+
+@media screen and (max-width:768px) {
+    html {
+        font-size: 50%;
+    }
+    .book-slot-btn-container{
+        padding: 50px;
+        align-items: flex-start;
+    }
+    #about {
+        width: 100%;
+        height:800px;
+        position: relative;
+    }
+    #aboutCircle:hover{
+        transform: scale(1);
+        transition-duration: .5s;
+        
+    }
+    #aboutCircle:hover::before{
+        transform: scale(0);
+        transition-duration: .5s;
+        rotate: 0deg;
+            animation: blackHoleSpin 300s linear infinite;
+        animation-fill-mode: forwards;
+    }
+    @keyframes blackHoleSpin{
+        0%{
+            transform:  rotate(0deg);
+        }
+        100%{
+            transform: rotate(0deg);
+        }
+    }
+    .aquaregiaTitleContainer {
+        background-size: 100vh;
+        
+    }
+    .aboutMainContainer {
+        margin-top: 150px;
+        flex-direction: column-reverse;
+        height: fit-content;
+        width: 100%;
+    }
+    #aboutCircle span{
+        font-size: 5.5rem;
+}
+    #aboutCircle p{
+        width: 75%;
+        font-size: 2rem;
+}
+    #bigFlex {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+
+    }
+    #flex1,#flex2,#flex3{
+        height: 33.33%;
+        width: 100%;
+        /* overflow: hidden; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 30px;
+       
+    }
+   
+   
+    
+    #infoCircle1 {
+            position:relative;
+            right: 130px;
+
+    }
+    #infoCircle2 {
+        position:relative;
+        left: 140px; 
+    }
+    #infoCircle3 {
+        position:relative;
+        right: 100px;
+
+    }
+    .two-Lines-Sub-Div-Logo{
+        border-radius: 0;
+    }
+    .two-Lines-Sub-Div{
+        width: 350px;
+    height: fit-content;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    }
+    .two-Lines-Sub-Div-Description-main-div{
+        width: 100%;
+        padding: 40px;
+        
+    }
+    #two-Lines-Sub-Div-Title{
+        text-align: center;
+    }
+    #two-Lines-Sub-Div-Description{
+        text-align: center;
+    }
+    #two-Lines-Sub-Div-ul{
+        flex-direction: column;
+        height: fit-content;
+        gap: 10px;
+        padding-top: 50px;
+    }
+    #two-Lines-Sub-Div-ul #two-Lines-Sub-Div-li2{
+        border: none;
+    }
+    #two-Lines-Sub-Div-ul #two-Lines-Sub-Div-li3{
+        display: none;
+    }
+    .majorAttractionsMaincontainer{
+        margin-top: 50px;
+    }
+    .major-attraction-smallnavbar{
+        width: fit-content;
+        overflow: scroll;
+    }
+   
+    
+}
+
+@media screen and (max-width:650px) {
+    #aboutCircle p{
+        width: 85%;
+        font-size: 2rem;
+}
+
+}
+@media screen and (max-width:500px) {
+    html {
+        font-size: 45%;
+    }
+    body{
+        background-size: 110vh;
+    }
+    .aquaregiaTitleContainer {
+        background-size: 100vh;
+        
+    }
+    #infoCircle1 ,
+    #infoCircle3{
+        margin-left: 500px;
+        padding-right: 200px;
+    }
+    #infoCircle2{
+        margin-right: 500px;
+        padding-left: 150px;
+    }
+    #major-attraction-smallnavbar{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        overflow: scroll;
+    }
+  
+    .aboutMainContainer {
+        margin-top: 100px;
+    }
+   
+    .majorAttractionsMaincontainer{
+        margin-top: 50px;
+    }
+    .two-Lines-Sub-Div{
+        background-image: url(../photos/34.webp);
+        background-size: cover;
+        background-position: center;
+    }
+    .two-Lines-Sub-Div-Description-main-div{
+        height: fit-content;
+    }
+    #two-Lines-Sub-Div-Description{
+        height: fit-content;
+        margin-top: 20px;
+    }
+    .name{
+        color: white;
+        font-size: 2rem;
+    }
+    .fest-post{
+        color: white;
+        font-size: 1.3rem;
+    }
+    .category-container
+    {
+        padding:0px 20px;
+        gap: 50px;
+    }
+    .category-heading{   
+    font-size: 2.5rem;
+    margin:50px 0px;
+    }
+    .one-heading{
+        margin:100px 0px 50px 0px;
+    }
+
+}
+
+
+@media screen and (max-width:430px) {
+    html {
+        font-size: 44%;
+    }
+    #infoCircle1 ,
+    #infoCircle3{
+        margin-left: 400px;
+        padding-right: 150px;
+    }
+    #infoCircle2{
+        margin-right: 400px;
+        padding-left: 150px;
+    }
+    #aboutCircle p{
+        width: 95%;
+
+    }
+    .two-Lines-Sub-Div{
+        width: 300px;
+    }
+    .two-Lines-Sub-Div-Logo{
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media screen and (max-width:375px) {
+    html {
+        font-size: 43%;
+    }
+    #aboutCircle p{
+        width: 95%;
+
+    }
+    #infoCircle1 ,
+    #infoCircle3{
+       right: 160px;
+    }
+    #infoCircle2{
+        left: 160px;
+    }
+    #aquaregiaTitle{
+        font-size: 8rem;
+    }
+   
+}
+@media screen and (max-width:300px) {
+    html {
+        font-size: 40%;
+    }
+   
+    #aquaregiaTitle{
+        font-size: 7rem;
+    }
+    .aquaregiaTitleContainer {
+        background-size: 200%;
+    }   
+    #toInfinity {
+    font-size: 2.2rem;
+    }
+    .book-slot-btn-container {
+        justify-content: center;
+        align-items: center;
+    }
+    #bookSlotBtn{
+        height: 30px;
+        font-size: 1.2rem;
+    }
+    #aboutCircle{
+        margin-left: 0;
+    }
+    #aboutCircle span {
+        margin-bottom: 21px;
+    }
+    #aboutCircle p {
+        width: 85%;
+        font-size: 1.7rem;
+    }
+    .two-Lines-Sub-Div{
+        width: 100%;
+    }
+    .two-Lines-Sub-Div-Logo{
+        width: 100%;
+    }
+    .two-Lines-Sub-Div{
+        width: 80%;
+    }
+    .two-Lines-Sub-Div-Logo{
+        width: 100%;
+        height: 250px;
+    }
+    .two-Lines-Sub-Div-Description-main-div{
+        width: 100%;
+        padding: 10px;
+        padding-bottom: 40px;
+        
+    }
+}
+@media screen and (max-height:650px) and (max-width:350px){
+    .book-slot-btn-container{
+        align-items: flex-end;
+
+    }
+}
+@media screen and (max-height:600px) and (max-width:900px){
+    .book-slot-btn-container{
+        position: absolute;
+        height: fit-content;
+        margin-bottom: -100px;
+
+    }
+}
+/* responsive code above */
+

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+     {{>header}}
+        <link rel="stylesheet" href="css/FAQs.css">
+    </head>
+<body>
+    <header>
+       <!-- navbar section stars from here -->
+       {{>navbar}}
+       <!-- navbar section ends here -->
+    </header> <!-- header ends here -->
+    <main>
+        <div class="heading"><h1>FAQs</h1></div>
+        <div class="main-content-container">
+            <div class="all-faqs-container">
+                <!-- question 1 -->
+                <div class="faqs-question">
+                    <h3 class="question">1. Where Can I register for Aquaregia?</h3>
+                    <span class="open">&#43;</span>
+                    <span class="close">&#8722</span>
+                </div>
+
+                <div class="faqs-answer">
+                    <p>Registration can be done at -<a href="/register" target="_blank">register</a>
+                    </p>
+                </div>
+                    <!-- question 2 -->
+                <div class="faqs-question">
+                    <h3 class="question">2. How do i get the details/rulebook for any particular event?</h3>
+                    <span class="open">&#43;</span>
+                    <span class="close">&#8722</span>
+                </div>
+
+                <div class="faqs-answer">
+                    <p>Details can be found at -<a href="/events" target="_blank">Events Page</a></p>
+                </div>
+                
+             <!-- question 3 -->
+             <div class="faqs-question">
+                <h3 class="question">3. Can I register for multiple events?</h3>
+                <span class="open">&#43;</span>
+            <span class="close">&#8722</span>
+        </div>
+
+        <div class="faqs-answer">
+                <p>Yes, you can.</p>
+        </div>
+         <!-- question 4 -->
+         <div class="faqs-question">
+            <h3 class="question">4. How do I confirm my participation in the fest?</h3>
+            <span class="open">&#43;</span>
+        <span class="close">&#8722</span>
+    </div>
+
+    <div class="faqs-answer">
+            <p>Go to - <a href="/register" target="_blank">Register</a> to register. Choose the event you want to register in and click on register.</p>
+    </div>
+    <!-- question 5-->
+
+<div class="faqs-answer">
+        <p>There are no charges for any event. Have fun :)</p>
+</div>
+     <!-- question 6 -->
+     <div class="faqs-question">
+        <h3 class="question">5. Do all members require separate registration for group events?</h3>
+        <span class="open">&#43;</span>
+    <span class="close">&#8722</span>
+</div>
+
+<div class="faqs-answer">
+        <p>No, group leader will have to register on behalf of all team members.</p>
+</div>
+
+ 
+<!-- question 7 -->
+<div class="faqs-question">
+    <h3 class="question">6. Will Aquaregia provide the instruments?</h3>
+    <span class="open">&#43;</span>
+<span class="close">&#8722</span>
+</div>
+
+<div class="faqs-answer">
+    <p>Participants will have to bring there own props and instruments.</p>
+</div>
+<!-- question 8 -->
+<div class="faqs-question">
+    <h3 class="question">7. How do I submit my entries for online competitions?</h3>
+    <span class="open">&#43;</span>
+<span class="close">&#8722</span>
+</div>
+
+<div class="faqs-answer">
+    <p>Contact individual Event Co-ordinators for details.</p>
+</div>
+
+
+            </div>
+        </div>
+    </main>
+    {{> footer}}
+     <!-- footer ends from here -->
+    
+</body>
+<script src="script/tok.js"></script>
+<script>
+    // code for hamburger mobile
+    // let tabsformobileclass = document.querySelectorAll('.tabsbuttonclass')
+function hamburgerMenu() {
+    document.getElementById("tabs_button").classList.toggle("show");
+    // document.getElementById("navBar").classList.toggle("navbarToggleClass");
+    // document.getElementById("rotatebtn").classList.toggle("rotate")
+    document.body.classList.toggle("stopscrolling");
+    document.getElementById("burger-bar1").classList.toggle("hamburger-animation1");
+    document.getElementById("burger-bar2").classList.toggle("hamburger-animation2");
+    document.getElementById("burger-bar3").classList.toggle("hamburger-animation3");
+
+    //   tabsformobileclass.forEach((item) =>
+    //   item.classList.toggle('showmobiletabs'));
+    
+  }
+
+
+//   scroll to top--------
+let mybutton = document.getElementById("backtotopbutton");
+window.onscroll = function(){
+  scrollFunction()
+};
+
+function scrollFunction(){
+  if(document.body.scrollTop > 400 || document.documentElement.scrollTop > 400)
+  {
+    mybutton.style.display = "block";
+  }
+   else{
+      mybutton.style.display = "none";
+     
+      }
+}
+
+function scrolltoTopfunction(){
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+const faqsQestions = document.querySelectorAll('.all-faqs-container .faqs-question');
+
+
+// faqsQestions.forEach((question) =>
+// question.addEventListener("click",activeQuestion));
+// function activeQuestion(){
+//     faqsQestions.forEach((question) =>
+//     this.nextElementSibling.classList.toggle('active'));
+//     document.Open.classList.toggle('openSign');
+    
+// }
+faqsQestions.forEach((question) =>{
+    question.addEventListener("click",() =>{
+        question.nextElementSibling.classList.toggle('active');
+        const Open = question.querySelector('.open');
+        const Close = question.querySelector('.close');
+        Open.classList.toggle('openSign');
+        Close.classList.toggle('closeSign');
+
+    });
+})
+
+</script>
+</html>

@@ -1,0 +1,386 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*::selection {
+  background-color: transparent;
+}
+
+*::-moz-selection {
+  background: transparent;
+}
+
+* {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+:root{
+  font-family: Whitney, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  cursor:default;
+}
+
+body {
+  overflow-x: hidden;
+  background-image: url(../photos/Stars-background-dark.svg);
+  background-size:60%;
+  position: relative;
+
+}
+
+#events{
+  background-color: white;
+  color: black;
+  border-radius: 20px;
+}
+
+/* after clicking hamburger icon scrolling will disable */
+.stopscrolling{
+  overflow: hidden;
+}
+/* after clicking hamburger icon scrolling will disable */
+.blackhole{
+  position: fixed;
+  /* opacity: 0.9; */
+  top: 0;
+  left: 0; 
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: light 2s linear infinite;
+  z-index: -1;
+}
+.blackhole img{
+  width: 50%;
+  filter:drop-shadow( 0px 0px 2px rgb(255, 196, 196));
+}
+.blackhole img{
+  width: 90%;
+  filter:drop-shadow( 0px 0px 2px rgb(255, 196, 196));
+}
+@keyframes light{
+  0%{
+      filter: brightness(1);
+  }
+  30%{
+      filter: brightness(1.9);
+  }
+  60%{
+      filter: brightness(1);
+  }
+  90%{
+      filter: brightness(1.4);
+
+  }
+  90%{
+      filter: brightness(1);
+  }
+}
+
+/* ************************************NAVBAR**** ENDS************* HERE****************************** */
+
+#quickAccess {
+  width: 11%;
+  height: 300px;
+  display: flex;
+  position: fixed;
+  margin-left: 30px;
+  border-radius: 20px;
+  padding: 20px;
+  backdrop-filter: blur(1px);
+  background-color: rgba(120, 120, 120, 0.225);
+}
+.quickaccess-ki-ul{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.quickaccess-ki-ul a{
+  text-decoration: none;
+  width: 100%;
+  color: white;
+}
+.quickaccess-ki-ul li{
+  width: 100%;
+  display: flex;
+  align-items:center;
+  justify-content:flex-start;
+  height: 30px;
+  font-weight: 400;
+ 
+  font-size: 1.8rem;
+  list-style: none;
+  transition: all .2s;
+  /* background-color: green; */
+}
+.quickaccess-ki-ul li:hover {
+  cursor: pointer;
+  /* font-weight: 600; */
+  font-size: 2.2rem;
+  transition: all .4s;
+}
+.quickaccess-ki-ul li.activeThistab::after{
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: -50px;
+  bottom: -5px;
+  z-index: -1;
+  /* background-color: red; */
+  background-image: url(../photos/ufo.webp);
+  background-position:left;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.quickaccess-ki-ul li.activeThistab{
+  position: relative;
+  cursor: pointer;
+  font-size: 2.2rem;
+  transition: all .4s;
+  color: rgb(188, 227, 255);
+}
+/* ***********QUICK**********ACCESS*******ENDS********HERE*********** */
+
+#bigDaddyFlex {
+    
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+}
+#mainContent {
+  width: 90%;
+ 
+  margin-left: 200px;
+  border-radius: 20px;
+  height: fit-content;
+  justify-self: flex-end;
+}
+.bigFlex {
+display: flex;
+  height: AUTO;
+  margin: 30px 30px 100px 30px ;
+  flex-direction: column;
+
+}
+.Flex1 {
+    
+    height: 50px;
+
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    padding: 6px 20px;
+    font-weight: 600;
+    border-radius: 15px;
+    width: 15vw;
+    justify-self: center;
+    align-self: center;
+    mix-blend-mode: difference;
+   
+}
+.Flex2 a{
+  text-decoration: none;
+  
+}
+.Flex2 {
+    height:auto;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+.secondline{
+  margin-top: 50px;
+}
+.smallFlex{
+    width: 250px;
+    backdrop-filter: blur(2px);
+    display: flex;
+    flex-direction: column;
+    height: 280px;
+    background: linear-gradient(rgba(26, 26, 26, 0.145),rgba(17, 17, 17, 0.563));
+    margin: 1%;
+    justify-content: center;
+    align-items: center;
+    transition: all 300ms;
+
+}
+.smallFlex:hover{
+  transform: scale(1.08);
+  transition: all 300ms;
+}
+.smallFlex:hover + .imgFlex{
+  height: 100%;
+  width: 100%;
+}
+.imgFlex{
+  height: 84%;
+  width: 93%;
+  background-color: #fff;
+  margin-top: 8px;
+
+}
+.bachaFlex{
+
+  align-self: flex-end;
+  height: 14%;
+  width: 100%;
+  font-size: 2.5vh;
+  text-align: center;
+ padding-top: 8px;
+ color: white;
+ margin-bottom: 5px;
+
+}  
+/* =========IMAGES .CSS======== */
+ 
+  
+  #imgFlexDr1{
+  background-image: url(../photos/DrNN.jpg);
+  background-size: 100%;
+  }
+  #imgFlexDr2{
+  background-image: url(../photos/DrAM.jpg);
+  background-size: 100%;
+  }
+  #imgFlexDr3{
+  background-image: url(../photos/DrMA.jpg);
+  background-size: 100%;
+  }
+  #imgFlexP1{
+  background-image: url(../photos/pCC.jpg);
+  background-size: 100%;
+  }
+  #imgFlexP2{
+  background-image: url(../photos/pCR.png);
+  background-size: 100%;
+  }
+  #imgFlexP3{
+  background-image: url(../photos/pF.jpg);
+  background-size: 100%;
+  }
+  footer{
+    background-color: rgba(0, 0, 0, 0.389);
+    /* mix-blend-mode: difference; */
+  }
+/* responsive code below*/
+@media screen and (max-width:1920px) {
+  html {
+      font-size: 60%;
+  }
+}
+
+@media screen and (max-width:1200px) {
+  html {
+      font-size: 60%;
+  }
+  .blackhole img{
+    width: 90vh;
+  }
+  .coordinators-heading-text{
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 600;
+    width: 70%;
+
+}
+}
+@media screen and (max-width:950px){
+  #quickAccess{
+      display: none;
+  }
+  #mainContent{
+      margin-left: 0px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100vw;
+  }
+  .bigFlex{
+      margin: 30px 30px 40px 30px
+  }
+  .Flex1{
+      font-size: 5vh;
+      margin-bottom: 25px;
+  }
+  .Flex2{
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      
+
+  }
+  .smallFlex{
+      margin: 10px 0px;
+  }
+
+}
+@media screen and (max-width:998px) {
+  html {
+      font-size: 55%;
+  }
+ #eventsformobilenav{
+  background-color: white;
+  color: black;
+  border-radius: 20px;
+ }
+}
+
+@media screen and (max-width:768px) {
+  html {
+      font-size: 50%;
+  }
+
+}
+
+@media screen and (max-width:500px) {
+  html {
+      font-size: 45%;
+  }
+  body{
+      background-size: 110vh;
+  }
+}
+
+
+
+@media screen and (max-width:430px) {
+  html {
+      font-size: 44%;
+  }
+}
+
+@media screen and (max-width:375px) {
+  html {
+      font-size: 43%;
+  }
+
+}
+@media screen and (max-width:300px) {
+  html {
+      font-size: 40%;
+  }
+}
+
+/* responsive code above */
+
